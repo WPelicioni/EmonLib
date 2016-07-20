@@ -183,6 +183,10 @@ double EnergyMonitor::calcIrms(unsigned int Number_of_Samples)
 
   
   for (unsigned int n = 0; n < Number_of_Samples; n++)
+	//There has been much current reading range. 
+	//We can avoid this by increasing the amount of times it will read and making a more stable average.
+	//For example by "Number_of_Samples" with a significant number.
+
   {
     sampleI = analogRead(inPinI);
 
